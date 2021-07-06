@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+
+{% block Content %}
+<div class="embed-responsive embed-responsive-16by9">
+<video width="400" height="400" controls>
+    <source src="{{ url }}">
+    <!-- <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag. -->
+  </video>    
+</div>
+  <br><br>
+
+  <br><br><br>
+
+  <h4 class="fw-bold">Evaluating Image Localization algorithm</h4>
+  <p class="fw-light">
+When we build machine learning models for the real world, we are required to evaluate such models to check their performance on unseen data points.
+<br> With the same intention in mind, we rely on an evaluation metric to check the effectiveness of different models on real-world data points.
+ <br> For the Image localization task, IoU is the widely used evaluation metrics. IoU stands for Intersection over Union.
+<br>
+To calculate IoU, we consider both the ground truth bounding box and the predicted bounding box.
+
+</p>
+
+  <br><br><br>
+  <br><br><br>  
+  <br><br><br>
+  <br><br><br>
+{% endblock %}

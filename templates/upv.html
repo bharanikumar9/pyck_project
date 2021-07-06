@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+
+{% block Content %}
+
+  <h2 class="text-center">Upload a Video</h2>
+  <form method="POST" enctype="multipart/form-data">
+    <!-- {{ form.as_p }} -->
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" name="title" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">Any title for your Video :) </div>
+    </div>
+
+    <label for="myfile">Select a file:</label>
+    <input type="file" id="file" name="file">   
+    <button type="submit" class="btn btn-success" value="submit">Upload</button>
+  </form>
+
+
+
+  <br><br><br>
+  <div class="text-center">
+  <h4 class="fw-bold">Processing video</h4>
+</div>
+
+<img src="../files/p4.jpeg" class="rounded mx-auto d-block" alt="HE">
+<br><br>
+<br>
+<p class="fw-light">
+Processing a video means, performing operations on the video frame by frame. Frames are nothing but just the particular instance of the video in a single point of time. 
+<br>We may have multiple frames even in a single second. Frames can be treated as similar to an image.
+<br>
+So, whatever operations we can perform on images can be performed on frames as well. 
+<br><br>
+Computer graphics often use the RBG model, which stands for Red, Green and Blue. These are the three primary colors that can be used to create other colors.
+<br>
+The main thing is different colors  formed by combining these primary colors. RGB colors usually have values of 0-255, where 0 means the color isn’t present at all, and 255 means it’s present with full strength.
+
+</p>
+
+  <br><br><br>
+  <br><br><br>  
+  <br><br><br>
+  <br><br><br>
+{% endblock %}
