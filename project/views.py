@@ -313,7 +313,7 @@ def handle_vid(v):
                     print(i)
             else:
                 break
-            if(i==3):  #sonnand ga ikkada chudu, idid number of frames limit petesa
+            if(i==30):  #sonnand ga ikkada chudu, idid number of frames limit petesa
                 break  
     fs.delete(name)
     cap.release()
@@ -331,7 +331,7 @@ def handle_vid(v):
         os.remove(file_name)
     os.chdir(os.path.join(BASE_DIR))
 
-    return fs.url("ff/55.mp4")
+    return fs.url("ff/ans.mp4")
 
 
 def upload_vid(request):
