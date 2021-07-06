@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+
+{% block Content %}
+
+  <h2 class="text-center">Upload a File</h2>
+  <form method="POST" enctype="multipart/form-data">
+    <!-- {{ form.as_p }} -->
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" name="title" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">Any title for your image :) </div>
+    </div>
+    <div>
+    <label for="myfile">Select a file:</label>
+    <input type="file" id="file" name="file">
+  </div>
+    <!-- <div id="camera" style="height:auto;width:auto; text-align:left;"></div> -->
+
+    <!--FOR THE SNAPSHOT-->
+    <!-- <input type="button" value="Take a Snap" id="btPic" onclick="takeSnapShot()" /> 
+    <p id="snapShot"></p>
+    <script>
+      // CAMERA SETTINGS.
+      Webcam.set({
+          width: 220,
+          height: 190,
+          image_format: 'jpeg',
+          jpeg_quality: 100
+      });
+      Webcam.attach('#camera');
+
+      // SHOW THE SNAPSHOT.
+      takeSnapShot = function () {
+          Webcam.snap(function (data_uri) {
+              document.getElementById('snapShot').innerHTML = 
+                  '<img src="' + data_uri + '" width="70px" height="50px" />';
+          });
+      }
+    </script> -->
+    <div>
+    <button type="submit" class="btn btn-success" value="submit">Upload</button>
+  </div>
+  </form>
+
+  <br><br><br>
+  <h4 class="fw-bold">Understanding Object Localization with Deep Learning</h4>
+  <p class="fw-light">
+  With the evaluation of Artificial intelligence technology, researchers and industries has adopted and integrated deep learning for many computer vision use cases. 
+  <br>Object localization is one such use case. Object localization algorithms identify the object and its location in an image by putting a bounding box around it.
+  <br><br>
+  Object detection is one of the classical problems in computer vision where you work to recognize what and where — specifically what objects are inside a given image and also where they are in the image.
+<br>  The problem of object detection is more complex than classification, which also can recognize objects but doesn’t indicate where the object is located in the image. 
+ <br> In addition, classification doesn’t work on images containing more than one object.
+<br>  While object detection is a complex problem that combines image localization and classification. Given an image, an object detection algorithm would return bounding boxes around all objects of interest and assign a class to them.
+</p>
+<img src="../files/p2.jpeg" class="rounded mx-auto d-block" alt="HE">
+<br><br>
+<h4 class="fw-bold">Further details</h4>
+<p class="fw-light">
+The algorithm “only looks once” at the image in the sense that it requires only one forward propagation pass through the neural network to make predictions. 
+<br>After non-max suppression (which makes sure the object detection algorithm only detects each object once), it then outputs recognized objects together with the bounding boxes.
+
+
+
+
+<br><br><br>
+<br><br><br>  
+<br><br><br>
+<br><br><br>
+</p>
+{% endblock %}

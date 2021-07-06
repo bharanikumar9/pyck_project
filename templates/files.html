@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block Content %}
+  <h2 class="text-center">The File you Uploaded</h2>
+   <table>
+     <!-- <thead>
+       <tr>
+         <th>{{title}}</th>
+         <th>Uploaded File</th>
+       </tr>
+     </thead> -->
+     <tbody>
+       <!-- {% for file in files %}
+          <tr>
+            <td>{{ file.title }}</td>
+            <td>{{ file.title }}</td>
+          </tr>
+       {% endfor %} -->
+       {% load static %} 
+
+       <img class="rounded mx-auto d-block" src="{% static 'ans.jpg' %}" alt="Girl in a jacket">
+     </tbody>
+   </table>
+   <br><br><br>
+   <p class="fw-bold">
+   The Green colour box bounds the person and any red line if visible represents the distance between persons indicating violation social distancing . </p>
+   <br><br>
+   <h4 class="fw-bold">Non-max suppression</h4>
+   <p class="fw-light">
+   The objects in the image can be of different sizes and shapes, and to capture each of these perfectly, the object detection algorithms create multiple bounding boxes.
+  <br> Ideally, for each object in the image, we must have a single bounding box. Something that covers the whole object.
+<br>
+To select the best bounding box, from the multiple predicted bounding boxes, these object detection algorithms use non-max suppression. 
+<br>This technique is used to “suppress” the less likely bounding boxes and keep only the best one. Thus leading to ideal senario from multiple bounding boxes case.
+</p>
+<br><br>
+<h4 class="fw-bold">The Process</h4>
+<p class="fw-light">
+The following is the process of selecting the best bounding box using non-max suppression
+<br><br>
+Step 1: Select the box with highest objectiveness score
+<br>
+Step 2: Then, compare the overlap (intersection over union) of this box with other boxes
+<br>
+Step 3: Remove the bounding boxes with overlap (intersection over union) >50%
+<br>
+Step 4: Then, move to the next highest objectiveness score
+<br>
+Step 5: Finally, repeat steps 2-4
+
+
+</p>
+
+   <br><br><br>
+<br><br><br>  
+<br><br><br>
+<br><br><br>
+{% endblock %}

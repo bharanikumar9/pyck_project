@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+
+{% block Content %}
+
+  <h2 class="text-center">Hey Welcome</h2>
+
+  <br><br><br><br>
+  <h2 class="fw-bold">About This website :</h2>
+  <p class="fw-light">In this website we can upload images and see application of image detection and processing  in action .</p>
+  <br><br><br><br>
+ 
+  <h4 class="fw-bold">Bounding Box</h4>
+  <p class="fw-light">
+  A bounding box is an imaginary rectangle that serves as a point of reference for object detection and creates a collision box for that object.
+  <br>
+Data annotators draw these rectangles over images, outlining the object of interest within each image by defining its X and Y coordinates. This makes it easier for machine learning algorithms to find what they’re looking for, determine collision paths, and conserves valuable computing resources.
+<br>
+Bounding boxes are one of the most popular image annotation techniques in deep learning. Compared to other image processing methods, this method can reduce costs and increase annotation efficiency.
+<br>  <br><br></p>
+<img src="../files/p3.jpeg" class="rounded mx-auto d-block" alt="HE">
+<br><br>
+<h5 class="fw-bold">Applications of Bounding Box</h5>
+<p class="fw-light">
+Take self-driving cars as an example. An annotator will draw bounding boxes around other vehicles and label them. 
+<br>
+This helps train an algorithm to understand what vehicles look like. Annotating objects such as vehicles, traffic signals, and pedestrians makes it possible for autonomous vehicles to maneuver busy streets safely.
+<br> Self-driving car perception models rely heavily on bounding boxes to make this possible.
+<br><br>
+Image annotation with the help of bounding boxes is also used to label objects seen from the viewpoint of robots and drones.
+<br> Images that are annotated with the technique help robots and drones to identify the wide variety of objects seen on earth.
+<br> The different types of objects that can be captured into the bounding box make it easier for drones and robots to identify similar physical objects from a distance and steer accordingly.
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+</p>
+
+{% endblock %}

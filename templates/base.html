@@ -1,0 +1,109 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm">
+            
+                {% block content %}
+                <div class="bg-primary bg-alpha-40"></div>
+                {%  endblock %}
+          </div>
+        </div>
+    </div>
+</body>
+</html> -->
+
+{% load static %}<!doctype html>
+
+<html lang="en">
+<head>
+  <!-- <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}"> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="{{ STATIC_URL }}style.css" /> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.js"></script>
+  <title>{% block title %}My Site{% endblock %}</title>
+ 
+<body>
+
+        <!-- Background image -->
+<!-- <div class="bg-image" style="
+background-image: url('https://mdbootstrap.com/img/new/standard/city/041.jpg');
+height: 400px;
+"></div> -->
+<!-- Background image -->
+
+<div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white" style="
+      background-image: url('https://mdbootstrap.com/img/new/slides/003.jpg');
+      height: 400px;
+    ">
+  <!-- <h1 class="mb-3 h2">Jumbotron</h1>
+
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus
+    praesentium labore accusamus sequi, voluptate debitis tenetur in deleniti
+    possimus modi voluptatum neque maiores dolorem unde? Aut dolorum quod
+    excepturi fugit.
+  </p> -->
+</div>
+
+ 
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="p-4" style="background-color: #ede3fd;">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+        </li>    
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'upload' %}">Upload File</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'upload_vid' %}">Upload video</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'cam' %}">Use Camera</a>
+        </li>         
+      </ul>
+    </div>
+  </div>
+  <nav class="navbar navbar-light" style="background-color: #ede3fd;">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div >
+            
+                {% block Content %}
+                <div class="bg-primary bg-alpha-40"></div>
+                {%  endblock %}
+          </div>
+        </div>
+    </div>
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ 
+</body>
+</html>
